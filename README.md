@@ -16,7 +16,15 @@ Messe is a Flutter-based social communication app designed for real-time messagi
 - **Cloud Firestore** for real-time database
 - **Firebase Storage** for uploading images/files
 
-## 🔧 Getting Started
+## 📱 Try the App
+
+- [⬇️ Download Messe for Android](https://github.com/a5xwin/Messe/releases/latest/download/app-release.apk)  
+  *(Latest APK — no signup required)*
+
+> _Tip: If prompted, allow installation from unknown sources._
+
+
+## 🧑‍💻 Getting Started with Development (For Testers)
 
 1. Clone the repository  
    ```bash
