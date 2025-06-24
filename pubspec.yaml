@@ -1,0 +1,64 @@
+name: messe
+description: "A new Flutter project."
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  shared_preferences: ^2.2.2
+  lottie: ^3.1.0
+  url_launcher: ^6.1.11 #to open external links
+  cupertino_icons: ^1.0.8
+  local_auth:   #used for using device fingerprint authentication
+  firebase_core: ^3.14.0
+  firebase_auth: ^5.6.0
+  cloud_firestore: ^5.6.9
+  provider: ^6.1.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^5.0.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/logo.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+   - assets/    
+
+  fonts:
+    - family: ProductSans
+      fonts:
+        - asset: assets/fonts/productsans-light.ttf
+          weight: 300
+        - asset: assets/fonts/productsans-lightitalic.ttf
+          weight: 300
+          style: italic
+        - asset: assets/fonts/productsans-medium.ttf
+          weight: 500
+        - asset: assets/fonts/productsans-regular.ttf
+          weight: 400
+        - asset: assets/fonts/productsans-pixel.ttf
+          weight: 400
+
+    - family: Nothing
+      fonts:
+        - asset: assets/fonts/nothing.ttf
+
+    - family: Monument
+      fonts:
+        - asset: assets/fonts/monument.ttf

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "783890843552",
+    "project_id": "messe-ash",
+    "storage_bucket": "messe-ash.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:783890843552:android:80015a6548a6cf3f1086c5",
+        "android_client_info": {
+          "package_name": "com.ash.messe"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDpQB7ElFRjklS3iSn86l4-r2J19dm5q0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
