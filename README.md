@@ -19,7 +19,6 @@ Messe is a Flutter-based social communication app designed for real-time messagi
 ## 📱 Try the App
 
 - [⬇️ Download Messe for Android](https://github.com/a5xwin/Messe/releases/latest/download/app-release.apk)  
-  *(Latest APK — no signup required)*
 
 > _Tip: If prompted, allow installation from unknown sources._
 
