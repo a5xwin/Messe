@@ -4,16 +4,6 @@ import 'package:firebase_core/firebase_core.dart' show FirebaseOptions;
 import 'package:flutter/foundation.dart'
     show defaultTargetPlatform, kIsWeb, TargetPlatform;
 
-/// Default [FirebaseOptions] for use with your Firebase apps.
-///
-/// Example:
-/// ```dart
-/// import 'firebase_options.dart';
-/// // ...
-/// await Firebase.initializeApp(
-///   options: DefaultFirebaseOptions.currentPlatform,
-/// );
-/// ```
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
@@ -52,11 +42,15 @@ class DefaultFirebaseOptions {
     }
   }
 
-  static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyDpQB7ElFRjklS3iSn86l4-r2J19dm5q0Q',
-    appId: '1:783890843552:android:80015a6548a6cf3f1086c5',
-    messagingSenderId: '783890843552',
-    projectId: 'messe-ash',
-    storageBucket: 'messe-ash.firebasestorage.app',
-  );
+  // Remove dotenv import and make this a method instead of static final
+  static FirebaseOptions get android {
+    // Access environment variables here at runtime
+    return FirebaseOptions(
+      apiKey: const String.fromEnvironment('API_KEY'),
+      appId: const String.fromEnvironment('APP_ID'),
+      messagingSenderId: const String.fromEnvironment('MESSAGING_SENDER_ID'),
+      projectId: 'messe-ash',
+      storageBucket: 'messe-ash.firebasestorage.app',
+    );
+  }
 }

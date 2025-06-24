@@ -2,30 +2,45 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:messe/services/auth/auth_gate.dart';
-import 'package:messe/firebase_options.dart'; 
 import 'package:messe/themes/theme_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  
-  // Lock orientation to portrait only
+
+  // Load .env file
+  await dotenv.load();
+
+  // Verify environment variables
+  debugPrint('🔑 API_KEY = ${dotenv.env['API_KEY']}');
+  debugPrint('📱 APP_ID = ${dotenv.env['APP_ID']}');
+  debugPrint('📨 MSG_SENDER_ID = ${dotenv.env['MESSAGING_SENDER_ID']}');
+
+  // Lock orientation
   await SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp,
   ]);
 
-  // Initialize Firebase
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+  // Initialize Firebase with environment variables
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: dotenv.env['API_KEY']!,
+      appId: dotenv.env['APP_ID']!,
+      messagingSenderId: dotenv.env['MESSAGING_SENDER_ID']!,
+      projectId: 'messe-ash',
+      storageBucket: 'messe-ash.firebasestorage.app',
+    ),
+  );
 
   runApp(
-    // Wrap app with ThemeProvider
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(),
       child: const MyApp(),
     ),
   );
-} 
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

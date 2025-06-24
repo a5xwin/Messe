@@ -6,9 +6,20 @@ import 'package:messe/services/auth/auth_service.dart';
 class MySidebar extends StatelessWidget {
   const MySidebar({super.key});
 
-  void logout() {
+  void logout(BuildContext context) async {
+    // First, close the drawer
+    Navigator.pop(context);
+    
+    // Sign out from Firebase
     final auth = AuthService();
-    auth.signOut();
+    await auth.signOut();
+    
+    // Clear entire navigation stack and go to root
+    Navigator.pushNamedAndRemoveUntil(
+      context,
+      '/', 
+      (route) => false,
+    );
   }
 
   @override
@@ -95,7 +106,7 @@ class MySidebar extends StatelessWidget {
                 style: TextStyle(fontFamily: 'Nothing'),
               ),
               leading: const Icon(Icons.logout_outlined),
-              onTap: logout,
+              onTap: () => logout(context), // Pass context to logout
             ),
           ),
         ],

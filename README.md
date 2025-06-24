@@ -12,29 +12,29 @@ Messe is a Flutter-based social communication app designed for real-time messagi
 
 ## 📸 Screenshots
 
-### 🔐 Splash Screen
-![Splash](assets/screenshots/1splash.jpg)
+###  Splash Screen
+![Splash](assets/screenshots/splash.jpg)
 
-### 🔐 Register Screen
-![Register](assets/screenshots/2register.jpg)
+###  Register Screen
+![Register](assets/screenshots/register.jpg)
 
-### 🔐 Home Screen (light-mode)
-![Home- light](assets/screenshots/4homelight.jpg)
+###  Home Screen (light-mode)
+![Home- light](assets/screenshots/homelight.jpg)
 
-### 🔐 Home Screen (dark-mode)
-![Home- dark](assets/screenshots/3homedark.jpg)
+###  Home Screen (dark-mode)
+![Home- dark](assets/screenshots/homedark.jpg)
 
-### 🔐 Chat Interface (light-mode)
-![ChatUI- light](assets/screenshots/6chatlight.jpg)
+###  Chat Interface (light-mode)
+![ChatUI- light](assets/screenshots/chatlight.jpg)
 
-### 🔐 Chat Interface (dark-mode)
-![ChatUI- dark](assets/screenshots/5chatdark.jpg)
+###  Chat Interface (dark-mode)
+![ChatUI- dark](assets/screenshots/chatdark.jpg)
 
-### 🔐 About Screen (light-mode)
-![About- light](assets/screenshots/8aboutlight.jpg)
+###  About Screen (light-mode)
+![About- light](assets/screenshots/aboutlight.jpg)
 
-### 🔐 About Screen (dark-mode)
-![About- dark](assets/screenshots/7aboutdark.jpg)
+###  About Screen (dark-mode)
+![About- dark](assets/screenshots/aboutdark.jpg)
 
 
 
